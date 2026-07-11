@@ -1,0 +1,34 @@
+tar_path: ./data/AVMIT_VGGish_VGG16.tar
+cache_dir: ./avmit_cache
+output_dir: ./outputs_quick_test
+
+max_samples: 2000
+val_fraction: 0.15
+test_fraction: 0.10
+
+audio_dim: 128
+visual_dim: 512
+proj_dim: 256
+latent_dim: 512
+
+batch_size: 128
+reg_epochs: 5
+dist_epochs: 5
+naive_epochs: 5
+lr: 0.0003
+weight_decay: 0.0001
+grad_clip: 1.0
+use_amp: true
+num_workers: 2
+early_stop_patience: 5
+
+temperature: 4.0
+alpha: 0.7
+beta: 0.3
+
+retrieval_k: [1, 5, 10]
+latency_runs: 50
+latency_warmup: 5
+
+seed: 42
+device: auto
